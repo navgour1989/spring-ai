@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.0'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'org.nav.ai'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Spring Boot Web Starter
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    //implementation 'org.springframework.ai:spring-ai-starter-model-openai'
+    //Meta Groq
+    implementation platform("org.springframework.ai:spring-ai-bom:1.0.0")
+    // Replace the following with the specific module dependencies (e.g., spring-ai-openai) or starter modules (e.g., spring-ai-starter-model-openai) that you wish to use
+    implementation 'org.springframework.ai:spring-ai-starter-model-openai'
+
+    //Google gemini
+    //implementation 'org.springframework.ai:spring-ai-starter-model-vertex-ai-gemini'
+
+    // Springdoc OpenAPI (Swagger UI) for Spring Boot 3.x
+    //implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+java {
+    sourceCompatibility = '17'
+    targetCompatibility = '17'
+}
