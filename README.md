@@ -17,7 +17,7 @@ Google AI API Key. Get one from the Google AI Studio.
    Build the project: npm run build. Ensure dist/index.js is generated.
 2. Configuration (application.properties)
    Replace the placeholder paths and API keys with your actual values.
-     spring.ai.openai.api-key=${GEMINI_API_KEY}
+     spring.ai.openai.api-key=${GEMINI_API_KEY}  -- We can set this env variable as vm option too [ex. -DGEMINI_API_KEY=xxx ]
      spring.ai.mcp.client.stdio.connections.local-node-server.command=node
      spring.ai.mcp.client.stdio.connections.local-node-server.args=C:\\Users\\dell\\IdeaProjects\\mcp-server\\src\\index.ts
 3. Project Structure
